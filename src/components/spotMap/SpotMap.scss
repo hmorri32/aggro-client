@@ -1,0 +1,48 @@
+.App {
+  font-size: 16px;
+  text-align: center;
+}
+
+.leaflet-container {
+  height: 100vh;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.leaflet-control-container {
+  position: absolute;
+  right: 43px;
+  border: none;
+}
+
+.leaflet-top {
+  top: 15px;
+  width: 40px;
+}
+
+.leaflet-touch .leaflet-bar {
+  margin: 0 auto;
+  position: absolute;
+  right: 7px;
+  width: 40px;
+  background-color: rgba(70,70,70,0.5);
+  border-radius: 0;
+  height: 85px;
+}
+
+.leaflet-control-zoom-in {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+}
+
+.leaflet-control-zoom-out {
+  position: absolute;
+  top: 41px;
+  left: 5px;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 3px !important;
+  width: 295px;
+}
