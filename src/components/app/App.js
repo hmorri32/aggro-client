@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import logo from '../../logo.svg';
+import AppContainer from '../../containers/AppContainer'
 import './App.css';
 
 class App extends Component {
+  componentDidMount() {
+    this.props.fetchSpots()
+  }
+
   render() {
     return (
       <div className="App">
@@ -18,4 +23,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default AppContainer(App);
