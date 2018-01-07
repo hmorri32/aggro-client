@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Map, TileLayer, Polyline } from "react-leaflet";
 import AppContainer from "../../containers/AppContainer";
-import SpotMarker from "../spotMarker/spotMarker";
+import SpotMarker from "../SpotMarker/spotMarker";
 import "./SpotMap.css";
 
 class SpotMap extends Component {
