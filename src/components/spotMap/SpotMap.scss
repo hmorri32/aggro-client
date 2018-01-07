@@ -4,9 +4,10 @@
 }
 
 .leaflet-container {
-  height: 100vh;
+  top: 250px;
+  height: 80vh;
   margin: 0 auto;
-  z-index: 1;
+  z-index: 10000;
 }
 
 .leaflet-control-container {

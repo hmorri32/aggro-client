@@ -1,0 +1,29 @@
+.aggro-surf-welcome {
+  min-height: 120px;
+  max-height: 150px;
+  font-family: Roboto; }
+
+.surf-sauce-h2 {
+  margin: 0px;
+  padding: 0px;
+  color: #123752;
+  font-family: Roboto;
+  font-weight: 100;
+  font-size: 1.4em;
+  text-decoration: none; }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 30px;
+  width: 75%;
+  align-self: center; }
+
+a {
+  text-decoration: none; }
+  a .nav-h2 {
+    font-weight: 700;
+    font-size: 1.2em; }
+    a .nav-h2:hover {
+      color: mediumaquamarine; }
