@@ -16,7 +16,13 @@ L.Icon.Default.mergeOptions({
 class SpotMarker extends Component {
   render() {
     const { spot, resetMap, zoom, lat, lon } = this.props;
-    return <Marker position={[parseFloat(lat), parseFloat(lon)]} />;
+    return(
+      <Marker position={[parseFloat(lat), parseFloat(lon)]}>
+        <Popup keepInView={true} className='custom-popup'>
+          <h3>{spot.name}</h3>
+        </Popup>
+      </Marker>
+    )
   }
 }
 
