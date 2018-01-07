@@ -1,0 +1,18 @@
+.montage {
+  z-index: 100;
+  display: flex;
+  margin: auto;
+  padding: 10px;
+  position: absolute;
+  background: white;
+  top: 250px;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.vidz {
+  width: 30%;
+  margin: 10px;
+}
