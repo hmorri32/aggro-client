@@ -22,7 +22,11 @@ const middleware = routerMiddleware(history);
 const devTools =
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
 
-const store = createStore(root,devTools,applyMiddleware(middleware, thunk, logger));
+const store = createStore(
+  root,
+  devTools,
+  applyMiddleware(middleware, thunk, logger)
+);
 
 const router = (
   <Provider store={store}>
