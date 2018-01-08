@@ -16,7 +16,7 @@ class SpotMap extends Component {
       ],
       currentLayer: "NatGeo_World_Map/MapServer/",
       current: "",
-      position: [34.4208, -119.6982],
+      position: [35.2208, -119.6982],
       maxBounds: [[180, -180], [-180, 180]],
       zoom: 7,
       spots: ""
