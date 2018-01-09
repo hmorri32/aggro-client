@@ -1,0 +1,26 @@
+ .feed-container {
+  position              : relative;
+  display               : grid;
+  top                   : 250px;
+  z-index               : 100;
+  background            : white;
+  grid-template-columns : 25% 25% 25% 25%;
+
+  .card {
+    display         : flex;
+    margin          : 20px;
+    justify-content : space-between;
+    flex-direction  : column;
+    border: 1px solid mediumseagreen;
+    padding: 10px;
+    .outro {
+      font-size       : 1.6em;
+      font-weight     : 700;
+      color           : #123752;
+      text-decoration : none;
+      &:hover {
+        color: mediumseagreen;
+      }
+    }
+  }
+}
