@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-export function withContext(WrappedComponent, context){
-
+export function withContext(WrappedComponent, context) {
   class ContextProvider extends React.Component {
     getChildContext() {
       return context;
     }
 
     render() {
-      return <WrappedComponent {...this.props} />
+      return <WrappedComponent {...this.props} />;
     }
   }
 
