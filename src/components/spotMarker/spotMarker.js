@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import AppContainer from "../../containers/AppContainer";
 import { Link } from "react-router-dom";
+import { withContext } from "../contextProvider/ContextProvider";
 
 L.Icon.Default.imagePath = ".";
 delete L.Icon.Default.prototype._getIconUrl;
@@ -14,16 +16,30 @@ L.Icon.Default.mergeOptions({
 });
 
 class SpotMarker extends Component {
+  static contextTypes = {
+    router: PropTypes.object.isRequired
+  };
+
   render() {
+    const LinkWithContext = withContext(Link, this.context);
     const { spot, resetMap, zoom, lat, lon } = this.props;
-    return(
+    return (
       <Marker position={[parseFloat(lat), parseFloat(lon)]}>
-        <Popup keepInView={true} className='custom-popup'>
-          <h3>{spot.name}</h3>
+        <Popup keepInView={true} className="custom-popup">
+          <div>
+            <h3>{spot.name}</h3>
+            <LinkWithContext
+              to={{
+                pathname: `/`,
+                spotData: spot
+              }}>
+              <button>Click me</button>
+            </LinkWithContext>
+          </div>
         </Popup>
       </Marker>
-    )
+    );
   }
 }
 
-export default SpotMarker;
+export default AppContainer(SpotMarker);
