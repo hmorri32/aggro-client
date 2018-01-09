@@ -25,8 +25,6 @@ nightmare
     })
     return yungData.map(element => element.filter(n => n != ""));
   })
-  // .wait(100000000)
   .end()
-  // .then(stuff => console.log(stuff))
   .then(result => fs.writeFileSync("stabData.js", JSON.stringify(result)))
-  // .catch(e => console.log(e))
+  .catch(e => console.log(e))
