@@ -9,6 +9,7 @@
     "leaflet": "^1.2.0",
     "nightmare": "^2.10.0",
     "node-sass-chokidar": "0.0.3",
+    "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-chartjs2": "^1.2.1",
     "react-dom": "^16.2.0",
