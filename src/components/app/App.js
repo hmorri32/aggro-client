@@ -5,6 +5,7 @@ import AppContainer from '../../containers/AppContainer'
 import SpotMap from '../spotMap/SpotMap'
 import {NavBar} from '../navBar/Navbar'
 import Hype from '../hype/Hype'
+import Feed from '../feed/Feed'
 
 import './App.css';
 
@@ -19,6 +20,7 @@ class App extends Component {
         <NavBar />
         <Route exact path='/map' component={SpotMap}/>
         <Route exact path="/hype" component={Hype} />
+        <Route exact path="/feed" component={Feed} />
       </div>
     );
   }
