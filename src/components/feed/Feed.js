@@ -14,18 +14,20 @@ class Feed extends Component {
   }
 
   renderStabFeed() {
-    const {stab} = this.state;
+    const { stab } = this.state;
     return stab.map((array, i) => {
       const href = array[0];
       const imageSrc = array[1];
       const description = array[2];
       return (
-        <div className="card">
-          <a href={href} className="outro">{description}</a>
+        <div className="card" key={i}>
+          <a href={href} className="outro">
+            {description}
+          </a>
           <img src={imageSrc} alt="cool-image" />
         </div>
-      )
-    })
+      );
+    });
   }
 
   renderBeachGritFeed() {
@@ -36,7 +38,9 @@ class Feed extends Component {
       const imageSrc = array[2];
       return (
         <div className="card" key={i}>
-          <a href={href} className="outro">{description}</a>
+          <a href={href} className="outro">
+            {description}
+          </a>
           <img src={imageSrc} alt="cool-image" />
         </div>
       );
@@ -44,12 +48,12 @@ class Feed extends Component {
   }
 
   render() {
-    return(
+    return (
       <div className="feed-container">
         {this.renderStabFeed()}
         {this.renderBeachGritFeed()}
       </div>
-    )
+    );
   }
 }
 
