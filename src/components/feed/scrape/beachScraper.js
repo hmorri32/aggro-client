@@ -1,10 +1,10 @@
 const fs = require("fs");
 const Nightmare = require("nightmare");
 const nightmare = Nightmare({
-  openDevTools: {
-    mode: "detach"
-  },
-  show: true
+  // openDevTools: {
+  //   mode: "detach"
+  // },
+  // show: true
 });
 
 nightmare
@@ -16,7 +16,7 @@ nightmare
     let list = [].slice.call(articles);
 
     const hrefs = list.map(article => {
-      images = article.children["0"].children["0"].children["0"].dataset.src;
+      const images = article.children["0"].children["0"].children["0"].dataset.src;
       return article.children["0"].href
         .concat(article.children["0"].innerText)
         .concat(images)
@@ -25,5 +25,5 @@ nightmare
     return hrefs.map(element => element.filter(n => n != ""));
   })
   .end()
-  .then(result => fs.writeFileSync("beachGritData.js", JSON.stringify(result)))
+  .then(result => fs.writeFileSync("beachGritData.js", `export const beachGritData = ${JSON.stringify(result)}`))
   .catch(e => console.log(e));
