@@ -59,14 +59,15 @@ export const SVGguy = () => {
 
 class NavBar extends Component {
 
-  constructor(props) {
+  constructor() {
     super();
   }
 
-  logOut(event) {
-    event.preventDefault();
-    // sessionStorage.removeItem("jwt");
-    this.props.actions.logOutUser();
+  logOut(e) {
+    const { history, actions } = this.props;
+    e.preventDefault();
+    actions.logOutUser();
+    history.push("/");
   }
 
   render() {
@@ -80,7 +81,7 @@ class NavBar extends Component {
           <Link to="/map">
             <h2 className="surf-sauce-h2 nav-h2">MAP</h2>
           </Link>
-          <Link to="/forecasts">
+          <Link to="/forecast">
             <h2 className="surf-sauce-h2 nav-h2">FORECAST</h2>
           </Link>
           <Link to="/hype">
