@@ -29,12 +29,12 @@ class Login extends Component {
 
     e.preventDefault();
     sessionApi.login(user).then(response => {
-      if(!response || response.length < 1 || response.auth_token === "undefined") {
-        this.setState({error: "fetch error" });
-      }
-      if (response.error || response.auth_token === "undefined") {
-        this.setState({ error: response.error });
-      } else {
+      if(!response || response.length < 1 || response.auth_token === undefined) {
+        this.setState({ error: "fetch error" });
+        if (response.error) {
+          this.setState({ error: response.error });
+        }
+      } else if (response.auth_token) {
         sessionStorage.setItem("jwt", response.auth_token);
         loginSuccess();
         history.push("/map");
