@@ -23,6 +23,8 @@ class SpotMap extends Component {
     };
   }
 
+  componentWillMount = async () => await this.props.fetchSpots();
+
   resetMap() {
     this.setState({ spots: "", zoom: 2, position: [0, -0] });
   }
