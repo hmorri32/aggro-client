@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import { Map, TileLayer, Polyline } from "react-leaflet";
+import { Controls } from "../mapControls/Controls.js";
 import AppContainer from "../../containers/AppContainer";
 import SpotMarker from "../spotMarker/SpotMarker";
+import satellite from "./assets/satellite.svg";
+import globe from "./assets/globe.svg";
 import "./SpotMap.css";
 
 class SpotMap extends Component {
@@ -9,13 +12,10 @@ class SpotMap extends Component {
     super();
     this.state = {
       mapLayers: [
-        { type: "Satellite", url: "World_Imagery/MapServer/" },
-        { type: "Nat Geo", url: "NatGeo_World_Map/MapServer/" },
-        { type: "Physical", url: "World_Physical_Map/MapServer/" },
-        { type: "Street", url: "World_Street_Map/MapServer/" }
+        { type: "Satellite", url: "World_Imagery/MapServer/", img: satellite },
+        { type: "Nat Geo", url: "NatGeo_World_Map/MapServer/", img: globe }
       ],
       currentLayer: "NatGeo_World_Map/MapServer/",
-      current: "",
       position: [35.2208, -119.6982],
       maxBounds: [[180, -180], [-180, 180]],
       zoom: 7,
@@ -30,7 +30,7 @@ class SpotMap extends Component {
   }
 
   renderSpots() {
-    const { current, zoom } = this.state;
+    const { zoom } = this.state;
     const { spots } = this.props;
     if (spots.length > 0) {
       return spots.map((spot, i) => {
@@ -48,31 +48,46 @@ class SpotMap extends Component {
     }
   }
 
+  handleClick(e) {
+    const { mapLayers } = this.state;
+    return mapLayers.map(layer => {
+      if (layer.type === e.target.id) {
+        this.setState({ currentLayer: layer.url });
+      }
+    });
+  }
+
   render() {
     const {
       zoom,
       position,
-      spots,
       mapLayers,
       currentLayer,
       maxBounds
     } = this.state;
 
     return (
-      <Map
-        updateWhenZooming={false}
-        minZoom={2}
-        animate={true}
-        useFlyTo={true}
-        ref={input => (this.map = input)}
-        center={position}
-        zoom={zoom}
-        maxBounds={maxBounds}>
-        <TileLayer
-          url={`https://server.arcgisonline.com/ArcGIS/rest/services/${currentLayer}/tile/{z}/{y}/{x}`}
+      <div>
+        <Controls
+          mapLayers={mapLayers}
+          handleClick={this.handleClick.bind(this)}
         />
-        {this.renderSpots()}
-      </Map>
+        <Map
+          updateWhenZooming={false}
+          minZoom={2}
+          animate={true}
+          useFlyTo={true}
+          ref={input => (this.map = input)}
+          center={position}
+          zoom={zoom}
+          maxBounds={maxBounds}
+        >
+          <TileLayer
+            url={`https://server.arcgisonline.com/ArcGIS/rest/services/${currentLayer}/tile/{z}/{y}/{x}`}
+          />
+          {this.renderSpots()}
+        </Map>
+      </div>
     );
   }
 }
