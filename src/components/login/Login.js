@@ -44,7 +44,7 @@ class Login extends Component {
       <div className="login-page">
         <div className="form">
           <div className="login-form">
-            <form>
+
               <TextInput
                 name="email"
                 label="email"
@@ -73,7 +73,7 @@ class Login extends Component {
               {this.state.error && (
                 <h2 className="error">{this.state.error}</h2>
               )}
-            </form>
+
           </div>
         </div>
       </div>
