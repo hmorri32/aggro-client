@@ -19,4 +19,3 @@ class SessionApi {
 }
 
 export default SessionApi;
-    // fetch("http://aggro-api.herokuapp.com/api/v1/spots")
