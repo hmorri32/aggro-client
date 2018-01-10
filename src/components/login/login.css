@@ -1,0 +1,12 @@
+.login {
+  z-index: 100;
+  margin: auto;
+  padding: 10px;
+  position: absolute;
+  background: white;
+  top: 250px;
+  text-align: center;
+  align-items: center;
+  /*flex-wrap: wrap;*/
+  /*justify-content: space-around;*/
+}

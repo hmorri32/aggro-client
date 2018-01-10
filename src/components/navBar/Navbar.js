@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
+import NavBarContainer from "../../containers/NavBarContainer";
 
 export const SVGguy = () => {
   return (
@@ -56,30 +57,56 @@ export const SVGguy = () => {
   );
 };
 
-export const NavBar = () => {
-  return (
-    <div className="App-header">
-      <Link to="/">
-        <SVGguy />
-      </Link>
-      <h2 className="surf-sauce-h2">ULTRA CHIC ARTISANAL SURF</h2>
-      <div className="nav-links">
-        <Link to="/map">
-          <h2 className="surf-sauce-h2 nav-h2">MAP</h2>
+class NavBar extends Component {
+
+  constructor(props) {
+    super();
+  }
+
+  logOut(event) {
+    event.preventDefault();
+    // sessionStorage.removeItem("jwt");
+    this.props.actions.logOutUser();
+  }
+
+  render() {
+    return (
+      <div className="App-header">
+        <Link to="/">
+          <SVGguy />
         </Link>
-        <Link to="/forecasts">
-          <h2 className="surf-sauce-h2 nav-h2">FORECAST</h2>
-        </Link>
-        <Link to="/hype">
-          <h2 className="surf-sauce-h2 nav-h2">HYPE</h2>
-        </Link>
-        <Link to="/feed">
-          <h2 className="surf-sauce-h2 nav-h2">FEED</h2>
-        </Link>
+        <h2 className="surf-sauce-h2">ULTRA CHIC ARTISANAL SURF</h2>
+        <div className="nav-links">
+          <Link to="/map">
+            <h2 className="surf-sauce-h2 nav-h2">MAP</h2>
+          </Link>
+          <Link to="/forecasts">
+            <h2 className="surf-sauce-h2 nav-h2">FORECAST</h2>
+          </Link>
+          <Link to="/hype">
+            <h2 className="surf-sauce-h2 nav-h2">HYPE</h2>
+          </Link>
+          <Link to="/feed">
+            <h2 className="surf-sauce-h2 nav-h2">FEED</h2>
+          </Link>
+          {this.props.logged_in ? (
+            <a href="/logout" onClick={(e) => this.logOut(e)}>
+              <h2 className="surf-sauce-h2 nav-h2">LOG OUT</h2>
+            </a>
+          ) : (
+            <Link to="/login">
+              {" "}
+              <h2 className="surf-sauce-h2 nav-h2">LOG IN</h2>
+            </Link>
+          )}
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
+
+export default NavBarContainer(NavBar);
+
 
 // <button
 //   className='log-out'
