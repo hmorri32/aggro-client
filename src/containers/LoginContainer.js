@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import * as sessionActions from "../../actions/sessionActions";
+import * as sessionActions from "../actions/sessionActions.js";
 
 function mapDispatchToProps(dispatch) {
   return {
