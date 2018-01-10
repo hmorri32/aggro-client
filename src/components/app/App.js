@@ -7,6 +7,7 @@ import Hype from "../hype/Hype";
 import Feed from "../feed/Feed";
 import Login from "../login/Login";
 import Forecast from "../forecast/Forecast";
+import SpotDetail from "../spotDetail/SpotDetail";
 
 import "./App.css";
 
@@ -31,8 +32,9 @@ class App extends Component {
         <NavBar history={this.props.history} />
         <Route exact path="/map" component={SpotMap} />
         <Route exact path="/forecast" component={Forecast} />
+        <Route exact path="/forecast/:id" component={SpotDetail} />
         <Route exact path="/hype" component={Hype} />
-        <Route exact path="/feed" component={Feed} onEnter={this.checkAuth} />
+        <Route exact path="/feed" component={Feed} />
         <Route exact path="/login" component={Login} />
 
       </div>
