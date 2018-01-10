@@ -1,0 +1,20 @@
+.controls {
+  position         : absolute;
+  float            : right;
+  top              : 350px;
+  right            : 10px;
+  z-index          : 3 !important;
+  width            : 40px;
+  background-color : rgba(70, 70, 70, 0.5);
+  background-clip  : padding-box;
+  border           : 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.map-btn {
+  background-color : mediumseagreen;
+}
+
+.controls img {
+  height : 20px;
+  width  : 20px;
+}
