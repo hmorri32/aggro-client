@@ -30,7 +30,7 @@ class SpotMarker extends Component {
             <h3>{spot.name}</h3>
             <LinkWithContext
               to={{
-                pathname: `/`,
+                pathname: `/forecast/${spot.surfline_id}`,
                 spotData: spot
               }}>
               <button>Click me</button>
