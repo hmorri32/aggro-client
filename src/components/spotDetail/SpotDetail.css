@@ -1,0 +1,15 @@
+.detail-container {
+  z-index: 100;
+  margin: auto;
+  padding: 10px;
+  position: absolute;
+  background: white;
+  top: 250px;
+  text-align: center;
+  align-items: center; }
+  .detail-container .analysis {
+    width: 50%;
+    margin: auto; }
+  .detail-container .frames {
+    margin: auto;
+    width: 75%; }
