@@ -15,9 +15,7 @@ class App extends Component {
     super();
     this.checkAuth = this.checkAuth.bind(this);
   }
-  // componentDidMount() {
-  //   this.props.fetchSpots();
-  // }
+
   componentWillMount() {
     this.checkAuth();
   }
@@ -25,7 +23,6 @@ class App extends Component {
   checkAuth() {
     const { sessionReducer, history } = this.props;
     sessionReducer ? history.push("/map") : history.push("/login");
-    console.log(sessionReducer);
   }
 
   render() {
