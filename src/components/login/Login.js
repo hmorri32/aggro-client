@@ -29,6 +29,7 @@ class Login extends Component {
 
     e.preventDefault();
     sessionApi.login(user).then(response => {
+      console.log(response)
       if (response.error) {
         this.setState({ error: response.error });
       } else {
