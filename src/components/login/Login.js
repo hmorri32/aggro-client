@@ -29,10 +29,11 @@ class Login extends Component {
 
     e.preventDefault();
     sessionApi.login(user).then(response => {
+      console.log(response)
       if(!response || response.length < 1) {
         this.setState({error: "fetch error" });
       }
-      if (response.error) {
+      if (response.error || response.auth_token === "undefined") {
         this.setState({ error: response.error });
       } else {
         sessionStorage.setItem("jwt", response.auth_token);
