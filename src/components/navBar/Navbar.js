@@ -70,7 +70,7 @@ class NavBar extends Component {
     const { history, actions } = this.props;
     e.preventDefault();
     actions.logOutUser();
-    history.push("/");
+    history.push("/login");
   }
 
   render() {
@@ -100,10 +100,7 @@ class NavBar extends Component {
           </div>
         ) : (
           <div className="nav-links">
-            <Link to="/login">
-              {" "}
-              <h2 className="surf-sauce-h2 nav-h2">LOG IN</h2>
-            </Link>
+
           </div>
         )}
       </div>
@@ -112,3 +109,9 @@ class NavBar extends Component {
 }
 
 export default NavBarContainer(NavBar);
+
+
+// <Link to="/login">
+//   {" "}
+//   <h2 className="surf-sauce-h2 nav-h2">LOG IN</h2>
+// </Link>
