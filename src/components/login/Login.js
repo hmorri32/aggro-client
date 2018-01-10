@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import TextInput from "../common/TextInput.js";
 import sessionApi from "../../api/sessionApi.js";
 import LoginContainer from "../../containers/LoginContainer.js";
-
-import "./login.css";
+import "./Login.css";
 
 class Login extends Component {
   constructor() {
@@ -35,38 +34,45 @@ class Login extends Component {
       } else {
         sessionStorage.setItem("jwt", response.auth_token);
         loginSuccess();
-        history.push("/");
+        history.push("/map");
       }
     });
   }
 
   render() {
     return (
-      <div className="login">
-        <form>
-          <TextInput
-            name="email"
-            label="email"
-            value={this.state.user.email}
-            onChange={this.onChange}
-          />
+      <div className="login-page">
+        <div className="form">
+          <div className="login-form">
+            <TextInput
+              name="email"
+              label="email"
+              value={this.state.user.email}
+              placeholder="EMAIL"
+              onChange={this.onChange}
+            />
 
-          <TextInput
-            name="password"
-            label="password"
-            type="password"
-            value={this.state.user.password}
-            onChange={this.onChange}
-          />
+            <TextInput
+              name="password"
+              label="password"
+              type="password"
+              value={this.state.user.password}
+              placeholder="PASSWORD"
+              onChange={this.onChange}
+            />
 
-          <input
-            type="submit"
-            className="btn btn-primary"
-            onClick={this.onSave}
-          />
-        </form>
-        {this.state.error && <h2 className="error">{this.state.error}</h2>}
+            <button
+              type="submit"
+              className="btn btn-primary"
+              onClick={this.onSave}
+            > SUBMIT </button>
+            {this.state.error && <h2 className="error">{this.state.error}</h2>}
+
+          </div>
+        </div>
       </div>
+      // <div className="login">
+      // </div>
     );
   }
 }
