@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import AppContainer from "../../containers/AppContainer";
 import SpotMap from "../spotMap/SpotMap";
-import { NavBar } from "../navBar/Navbar";
+import NavBar from "../navBar/Navbar";
 import Hype from "../hype/Hype";
 import Feed from "../feed/Feed";
 import Login from "../login/Login";
@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <NavBar />
+        <NavBar history={this.props.history} />
         <Route exact path="/map" component={SpotMap} />
         <Route exact path="/hype" component={Hype} />
         <Route exact path="/feed" component={Feed} />
