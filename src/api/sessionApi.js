@@ -1,6 +1,6 @@
 class SessionApi {
   static login(user) {
-    const request = new Request("http://aggro-api.herokuapp.com/api/users/login", {
+    const request = new Request("https://aggro-api.herokuapp.com/api/users/login", {
       method: "POST",
       headers: new Headers({
         "Content-Type": "application/json"
