@@ -29,8 +29,7 @@ class Login extends Component {
 
     e.preventDefault();
     sessionApi.login(user).then(response => {
-      console.log(response)
-      if(!response || response.length < 1) {
+      if(!response || response.length < 1 || response.auth_token === "undefined") {
         this.setState({error: "fetch error" });
       }
       if (response.error || response.auth_token === "undefined") {
