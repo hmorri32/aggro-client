@@ -6,7 +6,8 @@
   background: white;
   top: 250px;
   text-align: center;
-  align-items: center; }
+  align-items: center;
+  width: 100%; }
   .detail-container .analysis {
     width: 50%;
     margin: auto; }
