@@ -25,16 +25,30 @@ class SpotDetail extends Component {
   fetchDailyReport = async () => {
     const { spot } = this.state;
     let spitDaily, surflineDaily, mswDaily;
+
     if (spot.surfline_id) {
-      const res = await fetch(
-        `https://aggro-api.herokuapp.com/api/v1/surfline/daily/${
-          spot.surfline_id
-        }/parsed`
-      );
+      const res = await fetch(`https://aggro-api.herokuapp.com/api/v1/surfline/daily/${spot.surfline_id }/parsed`);
       const forecast = await res.json();
       surflineDaily = forecast[`${spot.surfline_id}`];
-      this.setState({ surflineDaily: surflineDaily });
     }
+
+    if (spot.spitcast_id) {
+      const res = await fetch(`http://aggro-api.herokuapp.com/api/v1/spitcast/daily/${spot.spitcast_id}`);
+      const forecast = await res.json();
+      spitDaily = forecast;
+    }
+
+    if (spot.msw_id) {
+      const res = await fetch(`http://localhost:3000/api/v1/msw/weekly/${spot.msw_id}`);
+      const forecast = await res.json();
+      mswDaily = forecast;
+    }
+
+    this.setState({
+      surflineDaily: surflineDaily,
+      spitDaily: spitDaily,
+      mswDaily: mswDaily
+    });
   };
 
   dailyForecastChart() {
@@ -47,7 +61,6 @@ class SpotDetail extends Component {
       surflineMin.push(surflineDaily[key]["min_height"]);
       surflineMax.push(surflineDaily[key]["max_height"]);
     }
-    console.log(surflineMin);
 
     const data = {
       labels: dates,
