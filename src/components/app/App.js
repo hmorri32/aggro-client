@@ -18,6 +18,7 @@ class App extends Component {
   }
 
   componentWillMount() {
+    this.props.fetchSpotsWithForecast();
     this.checkAuth();
   }
 
