@@ -52,7 +52,7 @@ class SpotDetail extends Component {
   };
 
   dailyForecastChart() {
-    const { surflineDaily } = this.state;
+    const { surflineDaily, spitDaily, mswDaily } = this.state;
     let surflineMin = [];
     let surflineMax = [];
     let dates = [];
@@ -61,27 +61,60 @@ class SpotDetail extends Component {
       surflineMin.push(surflineDaily[key]["min_height"]);
       surflineMax.push(surflineDaily[key]["max_height"]);
     }
+    let spitData;
+    let spitTimes;
+    let halfSpitTime;
+    if (spitDaily) {
+      spitData = spitDaily.map(data => data.size_ft);
+      spitTimes = spitDaily.map(data => `${data.day} ${data.hour}`);
+      halfSpitTime = spitTimes.splice(0, Math.floor(spitTimes.length / 3.5));
+    }
+
+    let mswMax;
+
+    if (mswDaily) {
+      mswMax = mswDaily.map(forecast => forecast.swell.absMaxBreakingHeight);
+    }
 
     const data = {
-      labels: dates,
+      labels: halfSpitTime || dates,
       datasets: [
+        // {
+        //   label: "Surf Min",
+        //   backgroundColor: "mediumseagreen",
+        //   borderColor: "#52B3D9",
+        //   borderWidth: 1,
+        //   hoverBackgroundColor: "#C5EFF7",
+        //   hoverBorderColor: "#52B3D9",
+        //   data: surflineMin,
+        //   stack: 1
+        // },
         {
-          label: "Surf Min",
-          backgroundColor: "mediumseagreen",
+          label: "MSW Max",
           borderColor: "#52B3D9",
           borderWidth: 1,
           hoverBackgroundColor: "#C5EFF7",
           hoverBorderColor: "#52B3D9",
-          data: surflineMin
+          data: mswMax,
+          stack: 3
         },
         {
-          label: "Surf Max",
+          label: "Surfline Max",
           backgroundColor: "#52B3D9",
+          borderColor: "#52B3D9",
+          borderWidth: 1,
+          hoverBorderColor: "#52B3D9",
+          data: surflineMax,
+          stack: 1
+        }, {
+          label: "Spitcast Max",
+          backgroundColor: "mediumseagreen",
           borderColor: "#52B3D9",
           borderWidth: 1,
           hoverBackgroundColor: "white",
           hoverBorderColor: "#52B3D9",
-          data: surflineMax
+          data: spitData,
+          stack: 2
         }
       ]
     };
