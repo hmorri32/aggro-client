@@ -1,1 +1,77 @@
-export const beachGritData = [["http://beachgrit.com/2018/01/ny-times-surfers-must-wrestle-evil/","NY TIMES: “SURFERS MUST WRESTLE EVIL!”","http://beachgrit.com/wp-content/uploads/2018/01/658334_w650-280x180.jpg"],["http://beachgrit.com/2018/01/crowdsource-want-stab/","CROWDSOURCE: WHAT DO YOU WANT FROM STAB?","http://beachgrit.com/wp-content/uploads/2018/01/Napoleon-Dynamite-Rules-of-Style-Man-Repeller-September-2017-0617-280x180.jpg"],["http://beachgrit.com/2018/01/damn-bad-words-not-good-surf-writing/","DAMN: BAD WORDS NOT GOOD FOR SURF WRITING!","http://beachgrit.com/wp-content/uploads/2018/01/IMG_6448.JPG-280x180.jpeg"],["http://beachgrit.com/2018/01/3-ways-improve-surfing-instantly/","3 WAYS TO IMPROVE YOUR SURFING INSTANTLY!","http://beachgrit.com/wp-content/uploads/2018/01/01_shanegouge-280x180.jpg"],["http://beachgrit.com/2018/01/surf-photog-whoa-chill/","SURF PHOTOGRAPHER: “WHOA CHILL OUT!”","http://beachgrit.com/wp-content/uploads/2018/01/Untitled-design-21-280x180.png"],["http://beachgrit.com/2018/01/confession-hide-surfboards-wife/","FEMDOM: “I HIDE SURFBOARDS FROM MY WIFE!”","http://beachgrit.com/wp-content/uploads/2018/01/Screen-Shot-2018-01-09-at-6.07.44-pm-280x180.png"],["http://beachgrit.com/2018/01/day-5-stab-keeps-lips-sealed/","DAY 5: STAB KEEPS LIPS SEALED!","http://beachgrit.com/wp-content/uploads/2018/01/static1.squarespace-280x180.jpg"],["http://beachgrit.com/2018/01/gimme-perfect-surf-car/","GIMME: THE PERFECT SURF CAR!","http://beachgrit.com/wp-content/uploads/2018/01/re3fmp9iqxq0swyqelz8-280x180.jpg"],["http://beachgrit.com/2018/01/day-4-stab-verbally-abused-husband/","DAY 4: STAB A VERBALLY ABUSED HUSBAND!","http://beachgrit.com/wp-content/uploads/2018/01/NapDynamite_305Pyxurz-280x180.jpg"],["http://beachgrit.com/2018/01/blood-feud-luke-egan-v-mark-healey/","BLOOD FEUD: MARK HEALEY V LUKE EGAN!","http://beachgrit.com/wp-content/uploads/2018/01/21-280x180.jpg"],["http://beachgrit.com/2018/01/definitive-australias-best-beaches/","DEFINITIVE: AUSTRALIA’S BEST BEACHES!","http://beachgrit.com/wp-content/uploads/2018/01/a-photo-we-love-heaven-and-hell-at-the-superbank-280x180.jpeg"],["http://beachgrit.com/2018/01/divine-kolohe-andino-just-got-married/","DIVINE: KOLOHE ANDINO JUST GOT MARRIED!","http://beachgrit.com/wp-content/uploads/2018/01/58c3f42c-02b4-4507-bc9d-5ed2c5c9c218rt_0-cr_0.0.1242.1242-rs_1800.h-280x180.jpeg"],["http://beachgrit.com/2018/01/day-3-stab-still-silent/","DAY 3: STAB STILL SILENT!","http://beachgrit.com/wp-content/uploads/2018/01/napoleon-280x180.jpg"],["http://beachgrit.com/2018/01/tragic-surf-clubs-reduced-panhandling/","TRAGIC: SURF CLUBS TURN TO PANHANDLING!","http://beachgrit.com/wp-content/uploads/2018/01/414133da79940e6565094cc380d4b5de-life-savers-lifeguard-280x180.jpg"],["http://beachgrit.com/2018/01/stab-admits-corporate-shills/","STAB ADMITS: “WE’RE CORPORATE SHILLS!”","http://beachgrit.com/wp-content/uploads/2018/01/Screen-Shot-2017-09-10-at-8.16.59-PM-280x180.png"]]
+export const beachGritData = [
+  [
+    "https://beachgrit.com/2018/02/fuck-watches-wqs-event/",
+    "PIPE: “WHO THE FUCK WATCHES A WQS EVENT?”",
+    "https://beachgrit.com/wp-content/uploads/2018/02/Screen-Shot-2018-02-05-at-2.19.11-pm-280x180.png"
+  ],
+  [
+    "https://beachgrit.com/2018/02/hey-pro-surfer-wanna-get-rich/",
+    "HEY PRO SURFER, WANNA GET RICH?",
+    "https://beachgrit.com/wp-content/uploads/2018/02/Pro-surfer-model-280x180.jpg"
+  ],
+  [
+    "https://beachgrit.com/2018/02/buy-chain-saw-attack-ct/",
+    "BUY A CHAINSAW AND ATTACK THE C**T!",
+    "https://beachgrit.com/wp-content/uploads/2018/02/tomo-sherm7-280x180.jpg"
+  ],
+  [
+    "https://beachgrit.com/2018/02/rich-wsl-gets-30-million/",
+    "RICH: WSL GETS 30 MILLION DOLLARS!",
+    "https://beachgrit.com/wp-content/uploads/2018/02/12e98b87acb7685618ba65ef539bf345-280x180.jpg"
+  ],
+  [
+    "https://beachgrit.com/2018/02/australian-shaper-charged-mans-death/",
+    "NOTED SHAPER CHARGED AFTER MAN’S DEATH",
+    "https://beachgrit.com/wp-content/uploads/2018/02/1976-Tony-Hardy-Surfboards-Marg-River-compilation-B-Grant-Mooney-Ric-Chan-pics-280x180.jpg"
+  ],
+  [
+    "https://beachgrit.com/2018/02/surf-ranch-everything-need-know/",
+    "SURF RANCH IS A SATANIC MIRROR!",
+    "https://beachgrit.com/wp-content/uploads/2018/02/Screen-Shot-2018-02-01-at-2.11.42-PM-280x180.png"
+  ],
+  [
+    "https://beachgrit.com/2018/02/just-inertia-big-korea/",
+    "JUST IN: THE INERTIA BIG IN KOREA!",
+    "https://beachgrit.com/wp-content/uploads/2018/02/maxresdefault-280x180.jpg"
+  ],
+  [
+    "https://beachgrit.com/2018/02/no-embargo-warshaw-co-surf-ranch/",
+    "NO EMBARGO: WARSHAW AND CO ON SURF RANCH!",
+    "https://beachgrit.com/wp-content/uploads/2018/01/beachgrit-founders-chas-smith-derek-reilly-900x675-280x180.jpg"
+  ],
+  [
+    "https://beachgrit.com/2018/02/pierre-agnes/",
+    "REMEMBER: QUIKSILVER BOSS PIERRE AGNES",
+    "https://beachgrit.com/wp-content/uploads/2018/02/pierre-agnes-a-gravi-tous-les-echelons-au-sein-de-quiksilver-pour-en-devenir-le-patron-en-2014-280x180.jpg"
+  ],
+  [
+    "https://beachgrit.com/2018/02/kelly-slater-like-beer/",
+    "KELLY SLATER SINGS: “I LIKE BEER!”",
+    "https://beachgrit.com/wp-content/uploads/2018/02/Screen-Shot-2018-01-31-at-9.55.06-AM-280x180.png"
+  ],
+  [
+    "https://beachgrit.com/2018/01/watch-mason-ho-loves-rocks/",
+    "WATCH: MASON HO (STILL) LOVES ROCKS!",
+    "https://beachgrit.com/wp-content/uploads/2018/01/Screen-Shot-2018-01-31-at-6.16.20-am-280x180.png"
+  ],
+  [
+    "https://beachgrit.com/2018/01/news-quiksilver-ceo-lost-sea/",
+    "BREAKING: QUIKSILVER CEO PIERRE AGNES LOST AT SEA…",
+    "https://beachgrit.com/wp-content/uploads/2018/01/quik-pierreagnes-danereynolds-courtneyjaedtke-14562-280x180.jpg"
+  ],
+  [
+    "https://beachgrit.com/2018/01/julian-wilson-not-good-news/",
+    "JULIAN WILSON: “I HAVE SOME NOT VERY GOOD NEWS!”",
+    "https://beachgrit.com/wp-content/uploads/2018/01/Screen-Shot-2018-01-30-at-3.26.24-pm-280x180.png"
+  ],
+  [
+    "https://beachgrit.com/2018/01/quiz-kooks-new-authority-boards/",
+    "QUIZ: ARE KOOKS THE NEW AUTHORITY ON BOARDS?",
+    "https://beachgrit.com/wp-content/uploads/2018/01/IMG-2621-280x180.jpg"
+  ],
+  [
+    "https://beachgrit.com/2018/01/breaking-kelly-slater-super-bowl/",
+    "BREAKING: KELLY SLATER IN SUPER BOWL!",
+    "https://beachgrit.com/wp-content/uploads/2018/01/Kelly-and-Giselle-280x180.jpg"
+  ]
+];
