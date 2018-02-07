@@ -1,4 +1,4 @@
-const base = process.env.NODE_ENV === "development"? "http://localhost:3000" : "http://aggro-api.herokuapp.com";
+const base = process.env.NODE_ENV === "development" ? "http://localhost:3000" : "http://aggro-api.herokuapp.com";
 
 export const addSpots = spots => {
   return {
@@ -26,6 +26,7 @@ export const fetchSpots = () => {
 };
 
 export const fetchSpotsWithForecast = () => {
+  console.log('ENV!', process.env)
   return dispatch => {
     fetch(`${base}/api/v1/spots_with_forecast`)
       .then(res => res.json())
