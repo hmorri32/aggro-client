@@ -1,4 +1,4 @@
-const base = process.env.NODE_ENV === "development" ? "http://localhost:3000" : "http://aggro-api.herokuapp.com";
+const base = process.env.NODE_ENV === "development" ? "http://localhost:3000" : "https://aggro-api.herokuapp.com";
 
 export const addSpots = spots => {
   return {

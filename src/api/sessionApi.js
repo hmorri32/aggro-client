@@ -3,7 +3,7 @@ class SessionApi {
     const base =
       process.env.NODE_ENV === "development"
         ? "http://localhost:3000"
-        : "http://aggro-api.herokuapp.com";
+        : "https://aggro-api.herokuapp.com";
     const request = new Request(`${base}/users/login`, {
       method: "POST",
       headers: new Headers({
