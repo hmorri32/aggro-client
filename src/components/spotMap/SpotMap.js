@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Map, TileLayer, Polyline } from "react-leaflet";
+import { Map, TileLayer } from "react-leaflet";
 import { Controls } from "../mapControls/Controls.js";
 import AppContainer from "../../containers/AppContainer";
 import SpotMarker from "../spotMarker/SpotMarker";
