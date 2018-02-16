@@ -2,7 +2,7 @@ Aggregated surf forecasting application. Backend RESTful API built with Rails an
 
 ![aggroLogin](http://g.recordit.co/jyDZ5znYMe.gif)
 
-![aggroMap](http://g.recordit.co/L3VLqXf55I.gif)
+![aggroMap](https://im.ezgif.com/tmp/ezgif-1-a75ae3cee2.gif)
 
 ![aggroFeed](http://g.recordit.co/e9DTtPKhAj.gif)
 
