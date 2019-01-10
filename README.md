@@ -19,13 +19,12 @@ API endpoints Authenticated using JWTs.
 ### Login
 ![aggroLogin](http://g.recordit.co/jyDZ5znYMe.gif)
 
-
 ### Map
 ![Aggro Map](/public/assets/map-shot.png)
 
 ### Forecast
 ![Aggro Forecast](/public/assets/forecast-shot.png)
-![aggroForecast](http://g.recordit.co/e9DTtPKhAj.gif)
+![aggroForecast](/public/assets/tide-grab.gif)
 
 ### Feed
 ![aggroFeed](http://g.recordit.co/jVvGsz5oz4.gif)
