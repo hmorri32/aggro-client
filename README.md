@@ -24,8 +24,10 @@ API endpoints Authenticated using JWTs.
 ![Aggro Map](/public/assets/map-shot.png)
 
 ### Forecast
-![aggroFeed](http://g.recordit.co/e9DTtPKhAj.gif)
+![Aggro Forecast](/public/assets/forecast-shot.png)
+![aggroForecast](http://g.recordit.co/e9DTtPKhAj.gif)
 
+### Feed
 ![aggroFeed](http://g.recordit.co/jVvGsz5oz4.gif)
 
 ### Video Library
