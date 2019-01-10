@@ -6,19 +6,29 @@ The RESTful API was built with Rails and PostgreSQL while the front end was buil
 
 API endpoints Authenticated using JWTs.
 
-## Login
+## Getting Started
+
+1. Clone this repo and cd into like `$ git clone https://github.com/hmorri32/aggro-client.git && cd agro-client`
+2. Install dependencies like `$ npm install`
+4. Start the dev server like: `$ npm start`
+5. Navigate over to `localhost:3000`
+6. Boogie til you barf
+
+## Screenshots
+
+### Login
 ![aggroLogin](http://g.recordit.co/jyDZ5znYMe.gif)
 
 
-## Map
+### Map
 ![aggroMap](https://screenshotscdn.firefoxusercontent.com/images/3559d001-4ba4-411d-bc82-ff33e95adc8f.jpg)
 
-## Forecast
+### Forecast
 ![aggroFeed](http://g.recordit.co/e9DTtPKhAj.gif)
 
 ![aggroFeed](http://g.recordit.co/jVvGsz5oz4.gif)
 
-## Video Library
+### Video Library
 ![aggroHype](http://g.recordit.co/DQsuFHlVEd.gif)
 
 
