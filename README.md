@@ -1,3 +1,5 @@
+# Aggro Surf 🏄 🌊 🌀
+
 Aggro Surf is an aggregated surf forecasting application that pulls from several surf and weather modeling websites, performs mutations, and displays data forecasts in an intuitive manner.
 
 The RESTful API was built with Rails and PostgreSQL while the front end was built with React, Redux, Thunk, Leaflet.js, Chart.js, Google Maps, and Nightmare.js. 
