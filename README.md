@@ -8,7 +8,7 @@ API endpoints Authenticated using JWTs.
 
 ## Getting Started
 
-1. Clone this repo and cd into like `$ git clone https://github.com/hmorri32/aggro-client.git && cd agro-client`
+1. Clone this repo and cd into it like `$ git clone https://github.com/hmorri32/aggro-client.git && cd agro-client`
 2. Install dependencies like `$ npm install`
 4. Start the dev server like: `$ npm start`
 5. Navigate over to `localhost:3000`
