@@ -21,7 +21,7 @@ API endpoints Authenticated using JWTs.
 
 
 ### Map
-![aggroMap](https://screenshotscdn.firefoxusercontent.com/images/3559d001-4ba4-411d-bc82-ff33e95adc8f.jpg)
+![Aggro Map](/public/assets/map-shot.png)
 
 ### Forecast
 ![aggroFeed](http://g.recordit.co/e9DTtPKhAj.gif)
